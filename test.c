@@ -14,8 +14,9 @@ FILE* writeFile;
 
 int main(int argc, char* argv[]) {
     char const* const fileName = argv[1];
-    FILE* file = fopen("differentEnds.txt", "r");
-    writeFile = fopen("tempFile.c", "w");
+    char const* const writeFileName = argv[2];
+    FILE* file = fopen(fileName, "r");
+    writeFile = fopen(writeFileName, "w");
 
     while (fgets(readLine, sizeof(readLine), file)) {
         writeLine();
