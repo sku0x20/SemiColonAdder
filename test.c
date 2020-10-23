@@ -1,18 +1,27 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#define LINE_LENGTH 256
 
 void writeLine();
 int getNewLineIndex();
 void constructAndWriteNewLine(int newLineIndex);
 void addNewLine();
 void addSemiColon(int newLineIndex);
+bool checkArgs(int argc, char* argv[]);
 
-char readLine[256];  // refactor 256 out
+char readLine[LINE_LENGTH];
 
 FILE* writeFile;
 
 int main(int argc, char* argv[]) {
+    if (!checkArgs(argc, argv)) {
+        printf("Error:- Args are Incorrect \n");
+        return EXIT_FAILURE;
+    }
+
     char const* const fileName = argv[1];
     char const* const writeFileName = argv[2];
     FILE* file = fopen(fileName, "r");
@@ -25,7 +34,14 @@ int main(int argc, char* argv[]) {
     fclose(file);
     fclose(writeFile);
 
-    return 0;
+    return EXIT_SUCCESS;
+}
+
+bool checkArgs(int argc, char* argv[]) {
+    if (argc < 3) {
+        return false;
+    }
+    return true;
 }
 
 void writeLine() {
@@ -85,7 +101,7 @@ void addSemiColon(int newLineIndex) {
 int getNewLineIndex() {
     int stringLength = strlen(readLine);
 
-    if (stringLength > 255) {
+    if (stringLength == LINE_LENGTH) {  // buffer full but no new line
         return -1;
     }
     if (readLine[stringLength - 1] != '\n') {
