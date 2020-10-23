@@ -6,10 +6,12 @@
 			"label": "C/C++: gcc build active file",
 			"command": "/usr/bin/gcc",
 			"args": [
+				"-I",
+				"/src/",
 				"-g",
-				"${file}",
+				"${workspaceFolder}/src/test.c",
 				"-o",
-				"${fileDirname}/build/${fileBasenameNoExtension}"
+				"${workspaceFolder}/build/test"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"

@@ -3,16 +3,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define LINE_LENGTH 256
+#include "MyParser.h"
 
+/*
 void writeLine();
 int getNewLineIndex();
 void constructAndWriteNewLine(int newLineIndex);
 void addNewLine();
 void addSemiColon(int newLineIndex);
+*/
 bool checkArgs(int argc, char* argv[]);
 
-char readLine[LINE_LENGTH];
+// char readLine[LINE_LENGTH];
 
 FILE* writeFile;
 
@@ -22,6 +24,12 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
 
+    char const* const readFileName = argv[1];
+    char const* const writeFileName = argv[2];
+
+    startParsing(readFileName, writeFileName);
+
+    /*
     char const* const fileName = argv[1];
     char const* const writeFileName = argv[2];
 
@@ -35,6 +43,8 @@ int main(int argc, char* argv[]) {
     fclose(file);
     fclose(writeFile);
 
+    */
+
     return EXIT_SUCCESS;
 }
 
@@ -45,6 +55,7 @@ bool checkArgs(int argc, char* argv[]) {
     return true;
 }
 
+/*
 void writeLine() {
     int newLineIndex = getNewLineIndex();
 
@@ -117,3 +128,5 @@ int getNewLineIndex() {
 void addNewLine() {
     fputc('\n', writeFile);
 }
+
+*/
