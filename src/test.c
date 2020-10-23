@@ -24,6 +24,7 @@ int main(int argc, char* argv[]) {
 
     char const* const fileName = argv[1];
     char const* const writeFileName = argv[2];
+
     FILE* file = fopen(fileName, "r");
     writeFile = fopen(writeFileName, "w");
 
