@@ -6,7 +6,10 @@
 
 #include "Constants.h"
 
-void lineToWords(char* itsLine, int startIndex, int endIndex) {
+// fun pointer can also be written as void callFun(char*)
+// and can also be called as (*callFun)(word)
+
+void lineToWords(char* itsLine, int startIndex, int endIndex, void (*callFun)(char*)) {
     static char word[WORD_LENGTH];
 
     int i = startIndex;
@@ -23,8 +26,7 @@ void lineToWords(char* itsLine, int startIndex, int endIndex) {
         }
         if (j != 0) {
             word[j] = '\0';
-            // call different Formatters Here
-            printf("%s \n", word);
+            callFun(word);
             j = 0;
             continue;
         }
@@ -38,13 +40,7 @@ void lineToWords(char* itsLine, int startIndex, int endIndex) {
             }
         }
         word[j] = '\0';
-        // call different Formatters Here
-        char* cursor = word;
-        while (*cursor) {
-            printf("%02x ", *cursor);
-            ++cursor;
-        }
-        printf("\n");
+        callFun(word);
         j = 0;
     }
 }
