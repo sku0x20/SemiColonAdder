@@ -1,5 +1,5 @@
 
-/* multiline comment */ int a = 5;
+/* multiline comment */ int a = 5
 
 /* multiline comment */
 
@@ -7,25 +7,25 @@
 
 /*multiline*/
 
-int a = 5 ;/* multiline comment */
+int a = 5 /* multiline comment */
 
-int a = 5    ;/* multiline int b = 7 comment */ int b = 7;
+int a = 5    /* multiline int b = 7 comment */ int b = 7
 
-/* multiline comment */ int a = 5;
+/* multiline comment */ int a = 5
 
-/* multiline comment */     int a = 5;
+/* multiline comment */     int a = 5
 
 /* multiline comment
    multiline comment
    multiline comment
    multiline comment */
 
-int a = 5 ;/* multiline comment
+int a = 5 /* multiline comment
    multiline comment int b = 7
    multiline comment int b = 7
-   multiline comment */ int b = 7;
+   multiline comment */ int b = 7
 
 /* multiline comment int b = 7
    multiline comment int b = 7
    multiline comment int b = 7
-   multiline comment */ int a = 5;
+   multiline comment */ int a = 5

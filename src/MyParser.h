@@ -8,7 +8,6 @@
 #include <string.h>
 
 #include "Constants.h"
-
 #include "MultiLineCommentFormatter.h"
 
 FILE* readFile;
@@ -25,7 +24,7 @@ char* formattedLine;
 void trimWhiteSpace() {
     int len = strlen(itsLine);  // exculding null character
 
-    for (endIndex = len - 1; (itsLine[endIndex] == ' ') || (itsLine[endIndex] == '\n'); endIndex--)
+    for (endIndex = len - 1; (endIndex >= 0) && ((itsLine[endIndex] == ' ') || (itsLine[endIndex] == '\n')); endIndex--)
         ;
 
     for (startIndex = 0; itsLine[startIndex] == ' '; startIndex++)
@@ -63,7 +62,16 @@ void startParsing(char const* const readFilename, char const* const writeFileNam
     while (readLine()) {
         // printf("startIndex = %d, endIndex = %d \n", startIndex, endIndex);
         // check if its empty line if so just write it there is no need to call any formatters
-        callFormatters();
+        if (endIndex == -1) {
+            fputs("\n", writeFile);
+        } else {
+            callFormatters();
+            for (int i = 0; i < startIndex; i++) {
+                fputc(' ', writeFile);
+            }
+            fputs(formattedLine, writeFile);
+            fputs("\n", writeFile);
+        }
     }
 
     fclose(readFile);
