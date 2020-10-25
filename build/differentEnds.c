@@ -14,11 +14,11 @@ int main(){
 
 /* multiline comment */
 
-/* multiline;
-    comment ;
+/* multiline
+    comment
 */
 
-/* multiline;
+/* multiline
     comment */
 
     someFunction();
