@@ -63,6 +63,8 @@ int main(int argc, char* argv[]) {
 ```
 ### Tests
 3 test cases are tested which are included in tests folder. <br />
-`./semiColonAdder ../tests/simpleSemicolonTest simpleSemicolonTest` <br />
-`./semiColonAdder ../tests/differentEnds.txt differentEnds.c` <br />
-`./semiColonAdder ../tests/cFile.c cFile.c`
+```
+./semiColonAdder ../tests/simpleSemicolonTest simpleSemicolonTest
+./semiColonAdder ../tests/differentEnds.txt differentEnds.c
+./semiColonAdder ../tests/cFile.c cFile.c
+```
