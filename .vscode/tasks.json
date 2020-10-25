@@ -9,9 +9,9 @@
 				"-I",
 				"/src/",
 				"-g",
-				"${workspaceFolder}/src/test.c",
+				"${workspaceFolder}/src/semiColonAdder.c",
 				"-o",
-				"${workspaceFolder}/build/test"
+				"${workspaceFolder}/build/semiColonAdder"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"
