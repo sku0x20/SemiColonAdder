@@ -1,5 +1,5 @@
 # SemiColonAdder
-Adds Semicolon to C files
+Appends Semicolon to C files.
 
 
 ### Usage:- 
@@ -8,17 +8,61 @@ Adds Semicolon to C files
 ```
 
 ### Example:-
-After
-```
-./test differentEnds.txt tempFile.c
-```
-We get tempFile with Semicolons.
+```C
+// cFile.c
 
-### Exception:-
-1. The C code should be formated as Google Format Specifiers. <br />
-2. Comment should not be in same line as Code. <br />
-eg:-
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char* argv[]) {
+    char const *const fileName = argv[1]
+    FILE* file = fopen(fileName, "r") 
+    char line[256]
+
+    while (fgets(line, sizeof(line), file)) {
+        /* note that fgets don't strip the terminating \n, checking its
+           presence would allow to handle lines longer that sizeof(line) */
+        printf("%s", line)
+    }
+    /* may check feof here to make a difference between eof and io failure -- network
+       timeout for instance */
+
+    printf("\n")
+
+    fclose(file)
+
+    return 0
+}
 ```
-int a = 6 // comment OR
-int b = 7 /* comment */
+Will get Converted to,
+```C
+// cFile.c
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char* argv[]) {
+    char const *const fileName = argv[1];
+    FILE* file = fopen(fileName, "r");
+    char line[256];
+
+    while (fgets(line, sizeof(line), file)) {
+        /* note that fgets don't strip the terminating \n, checking its
+           presence would allow to handle lines longer that sizeof(line) */
+        printf("%s", line);
+    }
+    /* may check feof here to make a difference between eof and io failure -- network
+       timeout for instance */
+
+    printf("\n");
+
+    fclose(file);
+
+    return 0;
+}
 ```
+### Tests
+3 test cases are tested which are included in tests folder. <br />
+`./test ../simpleSemicolonTest simpleSemicolonTest` <br />
+`./test ../differentEnds.txt differentEnds.c` <br />
+`./test ../tests/cFile.c cFile.c`
