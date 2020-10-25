@@ -8,7 +8,7 @@
 #include <string.h>
 
 #include "Constants.h"
-#include "MultiLineCommentFormatter.h"
+#include "SemiColonFormatter.h"
 
 FILE* readFile;
 FILE* writeFile;
@@ -50,7 +50,7 @@ bool isLastLine() {
 void callFormatters() {
     bool lastLine = isLastLine();
 
-    multiLineFormatter(itsLine, startIndex, endIndex, formattedLine);
+    semiColonFormatter(itsLine, startIndex, endIndex, formattedLine);
 }
 
 void startParsing(char const* const readFilename, char const* const writeFileName) {

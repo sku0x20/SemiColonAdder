@@ -1,6 +1,6 @@
-#ifndef MULTI_LINE_COMMENT_FORMATTER_H
+#ifndef SEMI_COLON_FORMATTER_H
 
-#define MULTI_LINE_COMMENT_FORMATTER_H
+#define SEMI_COLON_FORMATTER_H
 
 #include <stdbool.h>
 #include <string.h>
@@ -22,7 +22,7 @@ bool skipLine = false;
 
 int i;
 
-void multiLineFormatter(char* itsLine, int startIndex, int endIndex, char* fL) {
+void semiColonFormatter(char* itsLine, int startIndex, int endIndex, char* fL) {
     i = 0;
     startInd = startIndex;
     endInd = endIndex;
