@@ -63,6 +63,6 @@ int main(int argc, char* argv[]) {
 ```
 ### Tests
 3 test cases are tested which are included in tests folder. <br />
-`./test ../simpleSemicolonTest simpleSemicolonTest` <br />
-`./test ../differentEnds.txt differentEnds.c` <br />
+`./test ../tests/simpleSemicolonTest simpleSemicolonTest` <br />
+`./test ../tests/differentEnds.txt differentEnds.c` <br />
 `./test ../tests/cFile.c cFile.c`
