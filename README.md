@@ -4,7 +4,7 @@ Appends Semicolon to C files.
 
 ### Usage:- 
 ```
-./test readFileName writeFileName
+./semiColonAdder readFileName writeFileName
 ```
 
 ### Example:-
@@ -63,6 +63,6 @@ int main(int argc, char* argv[]) {
 ```
 ### Tests
 3 test cases are tested which are included in tests folder. <br />
-`./test ../tests/simpleSemicolonTest simpleSemicolonTest` <br />
-`./test ../tests/differentEnds.txt differentEnds.c` <br />
-`./test ../tests/cFile.c cFile.c`
+`./semiColonAdder ../tests/simpleSemicolonTest simpleSemicolonTest` <br />
+`./semiColonAdder ../tests/differentEnds.txt differentEnds.c` <br />
+`./semiColonAdder ../tests/cFile.c cFile.c`
