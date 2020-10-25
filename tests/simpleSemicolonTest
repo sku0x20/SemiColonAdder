@@ -38,14 +38,16 @@ int a = 5 /* multiline comment
 
 
 
-int main(){ /*jklsjdflksdf /*
+int main(){ /*jklsjdflksdf */
 
 }
-
+/*
+Not Supported
 int main()
-{ /*jklsjdflksdf */
+{
 
 }
+*/
 
 #define adasd /* jsdkfjsdlkf */
 #include asdas /* jsdkfjsdlkf */
