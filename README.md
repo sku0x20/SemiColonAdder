@@ -68,3 +68,18 @@ int main(int argc, char* argv[]) {
 ./semiColonAdder ../tests/differentEnds.txt differentEnds.c
 ./semiColonAdder ../tests/cFile.c cFile.c
 ```
+### Exception
+Function / Loop declared like 
+```C
+int main()
+{
+    // body
+}
+```
+are not supported yet, 
+`){` should be in same line.
+```C
+int main(){
+    // body
+}
+```
