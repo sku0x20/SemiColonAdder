@@ -29,3 +29,38 @@ int a = 5 ;/* multiline comment
    multiline comment int b = 7
    multiline comment int b = 7
    multiline comment */ int a = 5;
+
+   int a = 5;
+   int a = 5;
+   int a = 5;
+   int a = 5;
+
+
+
+
+int main(){ /*jklsjdflksdf /*
+
+}
+
+int main()
+{ /*jklsjdflksdf */
+
+}
+
+#define adasd /* jsdkfjsdlkf */
+#include asdas /* jsdkfjsdlkf */
+
+#include asdsd /*
+afsfasfasf hj;
+jsdkfjsdlkf;
+*/
+
+#include asdas /*
+int a = 5;
+*/
+
+#insdin dssdfsdf
+
+int a = 5 ;// comments
+
+int c = 4 ;// ocxmopm poewmpowc /* kjhfjskdf */
